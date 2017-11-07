@@ -1,0 +1,31 @@
+{
+    "allLearningDays": [
+        {
+            "location" : "College Library",
+            "date": "2016-02-27",
+            "cheat": false,
+            "development": true,
+            "finance": true
+        },
+        {
+            "location" : "Wendt Library",
+            "date": "2016-03-01",
+            "cheat": true,
+            "development": false,
+            "finance": false
+        },
+        {
+            "location" : "Steenbock Library",
+            "date": "2016-03-20",
+            "cheat": false,
+            "development": true,
+            "finance": false
+        }
+    ],
+    "goal": 10,
+    "errors": [],
+    "locationNames": {
+        "fetching": false,
+        "suggestions": ["College Library","Wendt Library","Steenbock Library","Memorial Library"]
+    }
+}
