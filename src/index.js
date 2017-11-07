@@ -1,15 +1,34 @@
 import C from "./constants";
-import { allLearningDays, goal } from "./initialState.json";
+import { allLearningDays } from "./store/reducers";
+
+const state = [
+  {
+    "location" : "Home",
+    "date": "2016-10-01",
+    "cheat": false,
+    "development": false,
+    "finance": true
+  },
+  {
+    "location" : "Wendt Library",
+    "date": "2016-12-01",
+    "cheat": false,
+    "development": true,
+    "finance": false
+  }
+];
+
+const action = {
+  type: C.REMOVE_DAY,
+  payload: "2016-12-01"
+};
+
+const nextState = allLearningDays(state, action);
 
 console.log(`
 
-  Learning Day Counter
-  ====================
-  The goal is ${goal} days
-  Initially there are ${allLearningDays.length} learning days in state
-
-  Constants
-  ====================
-  ${Object.keys(C).join('\n     ')}
+  initial state: ${JSON.stringify(state)}
+  action: ${JSON.stringify(action)}
+  new state: ${JSON.stringify(nextState)}
 
 `);
